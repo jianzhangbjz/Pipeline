@@ -131,7 +131,7 @@ rm -fr ${resultfile}
 # resultsummary=`python3 handleresult.py -a get -i ${newresultfile} 2>&1 `
 resultsummary=`python3 handleresult.py -a get -i ${newresultfile} 2>&1 || true`
 finalresult=""
-if (echo $resultsummary | grep -q -E "FAIL!!!") ; then
+if (echo $resultsummary | grep -q -E "FAIL") ; then
   echo "FAIL"
   finalresult="FAIL"
 else
